@@ -15,6 +15,7 @@ Depends: ${misc:Depends},
 	gdebi,
 	repoman,
 	pikman,
+Conflicts: update-manager
 Description: A Meta package to install pika's collection of package management software.
 
 Package: pika-gameutils-meta
