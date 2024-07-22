@@ -1,3 +1,9 @@
+pika-meta (11:4.0-101pika1) pika; urgency=medium
+
+  * PikaOS 4
+
+ -- Ward Nakchbandi <hotrod.master@hotmail.com>  Thu, 12 Jan 2023 16:48:00 +0300
+
 pika-meta (10:3.7-100pika3) pikauwu; urgency=medium
 
   * PikaUwU

@@ -15,14 +15,12 @@ Depends: ${misc:Depends},
 	gdebi,
 	repoman,
 	pikman,
-Conflicts: update-manager
 Description: A Meta package to install pika's collection of package management software.
 
 Package: pika-gameutils-meta
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends},
-	flatpak,
 	pika-codecs-meta,
 	i965-va-driver,
 	intel-media-va-driver-non-free,
@@ -47,8 +45,6 @@ Depends: ${misc:Depends},
 	vkbasalt:i386,
 	mangohud,
 	mangohud:i386,
-	gamemode,
-	libgamemodeauto0:i386,
 	intel-media-va-driver-non-free:i386,
 	goverlay,
 	gamescope-session,
@@ -59,7 +55,6 @@ Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends},
 	ffmpeg,
-	ffmpeg5,
 	libavcodec60:i386,
 	libavdevice60:i386,
 	libavfilter9:i386,
@@ -100,7 +95,7 @@ Depends: ${misc:Depends},
 	heif-thumbnailer
 Recommends:
 	gnome-sushi	
-Description: A Meta package to install pika's collection of codec software.
+Description: A Meta package to install pika's collection of Multi-media Codecs.
 
 Package: pika-rocm-meta
 Architecture: all
@@ -130,11 +125,13 @@ Depends: ${misc:Depends},
 	libreoffice-writer,
 	libreoffice-gnome,
 	libreoffice-ogltrans,
-Description: A Meta package to install pika's collection of Office software.
+Description: A Meta package to install pika's collection of LibreOffice software.
 
 Package: pika-gameutils-meta-extra
 Architecture: all
+Pre-Depends: flatpak
 Depends: ${misc:Depends}, 
+	flatpak,
 	pika-gameutils-meta
 Description: A Meta package to Extend pika's collection of gaming software.
 
