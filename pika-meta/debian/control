@@ -52,7 +52,8 @@ Description: A Meta package to install pika's collection of gaming software.
 Package: pika-codecs-meta
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends},
+Depends:
+	${misc:Depends},
 	vlc,
 	kio-extras, 
 	# FFMPEG
