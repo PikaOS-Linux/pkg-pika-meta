@@ -9,11 +9,10 @@ Rules-Requires-Root: no
 Package: pika-package-manager
 Architecture: all
 Depends: ${misc:Depends}, 
-	pika-drivers,
 	synaptic,
 	python-apt-common,
-	gdebi,
-	repoman,
+	pika-drivers,
+	pikman-update-manager,
 	pikman,
 Description: A Meta package to install pika's collection of package management software.
 
@@ -54,45 +53,49 @@ Package: pika-codecs-meta
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends},
-	ffmpeg,
-	libavcodec60:i386,
-	libavdevice60:i386,
-	libavfilter9:i386,
-	libavformat60:i386,
-	libavutil58:i386,
-	libpostproc57:i386,
-	libswresample4:i386,
-	libswscale7:i386,
-	libavcodec59:i386,
-	libavdevice59:i386,
-	libavfilter8:i386,
-	libavformat59:i386,
-	libavutil57:i386,
-	libpostproc56:i386,
-	libswresample4ff5:i386,
-	libswscale6:i386,	
-	ffmpegthumbs,
 	vlc,
-	exe-thumbnailer,
 	kio-extras, 
-	intel-media-va-driver-non-free, 
-	nvidia-vaapi-driver, 
-	nvidia-vaapi-driver:i386, 
-	va-driver-all, 
-	vdpau-driver-all,
+	# FFMPEG
+	ffmpeg,
+	# 32bit FFMPEG
+	libavcodec61:i386,
+	libavdevice61:i386,
+	libavfilter10:i386,
+	libavformat61:i386,
+	libavutil59:i386,
+	libpostproc58:i386,
+	libswresample5:i386,
+	libswscale8:i386,
+	# gstreamer
 	gstreamer1.0-libav,
 	gstreamer1.0-plugins-bad,
 	gstreamer1.0-plugins-base,
 	gstreamer1.0-plugins-good,  
-	gstreamer1.0-plugins-ugly, 
-	gstreamer1.0-libav:i386, 
-	gstreamer1.0-plugins-bad:i386, 
-	gstreamer1.0-plugins-ugly:i386,
-	intel-media-va-driver-non-free:i386,
+	gstreamer1.0-plugins-ugly,
 	gstreamer1.0-vaapi,
+	# 32bit gstreamer
+	gstreamer1.0-libav:i386,
+	gstreamer1.0-plugins-bad:i386,
+	gstreamer1.0-plugins-base:i386,
+	gstreamer1.0-plugins-good:i386,  
+	gstreamer1.0-plugins-ugly:i386,
+	gstreamer1.0-vaapi:i386,
+	# Mesa VA-API Drivers
+	va-driver-all, 
+	vdpau-driver-all,
+	# Intel VA-API Drivers
+	intel-media-va-driver-non-free, 
+	intel-media-va-driver-non-free:i386,
+	# Nvidia VA-APT Drivers
+	nvidia-vaapi-driver, 
+	nvidia-vaapi-driver:i386, 
+	# Thumbnails
+	ffmpegthumbs,
+	exe-thumbnailer,
+	heif-thumbnailer,
+	# Pixbufs support
 	webp-pixbuf-loader,
 	heif-gdk-pixbuf,
-	heif-thumbnailer
 Recommends:
 	gnome-sushi	
 Description: A Meta package to install pika's collection of Multi-media Codecs.
