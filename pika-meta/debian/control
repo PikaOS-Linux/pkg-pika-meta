@@ -53,7 +53,6 @@ Package: pika-codecs-meta
 Architecture: all
 Multi-Arch: foreign
 Depends:
-	${misc:Depends},
 	vlc,
 	kio-extras, 
 	# FFMPEG
