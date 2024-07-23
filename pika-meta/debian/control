@@ -20,32 +20,32 @@ Package: pika-gameutils-meta
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends},
+# Codecs
 	pika-codecs-meta,
-	i965-va-driver,
-	intel-media-va-driver-non-free,
+# Mesa
 	libegl1-mesa-dev,
 	libgbm-dev,
 	libgl1-mesa-dri,
 	libglapi-mesa,
 	libglu1-mesa,
-	unrar,
-	rar,
 	mesa-common-dev,
-	mesa-va-drivers,
-	mesa-vdpau-drivers,
 	mesa-vulkan-drivers,
+# Wine	
 	wine,
 	wine-staging | wine-devel | wine-stable,
-	va-driver-all,
-	steam-launcher,
 	winetricks,
+# Game launchers	
+	steam-launcher,
 	lutris,
+# Gaming utilites	
 	vkbasalt,
 	vkbasalt:i386,
 	mangohud,
 	mangohud:i386,
-	intel-media-va-driver-non-free:i386,
 	goverlay,
+	unrar,
+	rar,
+# Handhelds	
 	gamescope-session,
 Description: A Meta package to install pika's collection of gaming software.
 
@@ -53,11 +53,12 @@ Package: pika-codecs-meta
 Architecture: all
 Multi-Arch: foreign
 Depends:
+	${misc:Depends},
 	vlc,
 	kio-extras, 
-	# FFMPEG
+# FFMPEG
 	ffmpeg,
-	# 32bit FFMPEG
+# 32bit FFMPEG
 	libavcodec61:i386,
 	libavdevice61:i386,
 	libavfilter10:i386,
@@ -66,34 +67,37 @@ Depends:
 	libpostproc58:i386,
 	libswresample5:i386,
 	libswscale8:i386,
-	# gstreamer
+# gstreamer
 	gstreamer1.0-libav,
 	gstreamer1.0-plugins-bad,
 	gstreamer1.0-plugins-base,
 	gstreamer1.0-plugins-good,  
 	gstreamer1.0-plugins-ugly,
 	gstreamer1.0-vaapi,
-	# 32bit gstreamer
+# 32bit gstreamer
 	gstreamer1.0-libav:i386,
 	gstreamer1.0-plugins-bad:i386,
 	gstreamer1.0-plugins-base:i386,
 	gstreamer1.0-plugins-good:i386,  
 	gstreamer1.0-plugins-ugly:i386,
 	gstreamer1.0-vaapi:i386,
-	# Mesa VA-API Drivers
+# Mesa VA-API Drivers
 	va-driver-all, 
 	vdpau-driver-all,
-	# Intel VA-API Drivers
+	mesa-va-drivers,
+	mesa-vdpau-drivers,
+	i965-va-driver
+# Intel non-free VA-API Drivers
 	intel-media-va-driver-non-free, 
 	intel-media-va-driver-non-free:i386,
-	# Nvidia VA-APT Drivers
+# Nvidia VA-APT Drivers
 	nvidia-vaapi-driver, 
 	nvidia-vaapi-driver:i386, 
-	# Thumbnails
+# Thumbnails
 	ffmpegthumbs,
 	exe-thumbnailer,
 	heif-thumbnailer,
-	# Pixbufs support
+# Pixbufs support
 	webp-pixbuf-loader,
 	heif-gdk-pixbuf,
 Recommends:
